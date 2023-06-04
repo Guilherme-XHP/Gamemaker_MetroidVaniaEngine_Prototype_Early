@@ -1,0 +1,13 @@
+Prototipo Atual
+
+1 - Plataforma (Sistemas By Xingu){
+
+	1 - Configs Basicas (Sala, Pastas, Nomes, Github) [OK - XINGU]
+	Site Para Calculo de Resolucao:  https://www.omnicalculator.com/other/resolution-scale
+	2 - Background de Teste [OK - XINGU]
+	3 - Sprites Basicos [OK - XINGU]
+	4 - Colisao [OK - XINGU]
+	5 - Player [OK - XINGU]
+	6 - Sistemas Basicos
+
+}
