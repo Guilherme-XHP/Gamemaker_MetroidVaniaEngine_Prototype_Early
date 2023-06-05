@@ -144,29 +144,11 @@ function scr_player_sys(){ //Script Do Player
 	
 	if dash_timer <= 0 {
 		if key_dash{
-			
-					instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
-		instance_particle_dust.set_size(0.5, 1);
-		instance_particle_dust.set_direction(0,360);
-		instance_particle_dust.set_emitter_size(-1,6, 0, 0);
-		instance_particle_dust.set_speed(1,2,-0.2);
-		instance_particle_dust.set_life(10, 70);
-		instance_particle_dust.burst(90);
-		
 			h_spd = lengthdir_x(dash_spd * image_xscale, dash_dir);
 			dash_timer = dash_dur;
 			scr_player_collision();
 		}	
 	}else{
-		
-		instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
-		instance_particle_dust.set_size(0.5, 1);
-		instance_particle_dust.set_direction(0,360);
-		instance_particle_dust.set_emitter_size(-1,6, 0, 0);
-		instance_particle_dust.set_speed(1,2,-0.2);
-		instance_particle_dust.set_life(10, 70);
-		instance_particle_dust.burst(90);
-		
 		dash_timer--;
 		state = "dash";
 		if dash_timer <= 0 {
