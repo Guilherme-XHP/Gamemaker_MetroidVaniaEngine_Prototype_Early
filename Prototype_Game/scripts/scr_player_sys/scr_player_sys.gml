@@ -103,6 +103,9 @@ function scr_player_sys(){ //Script Do Player
 			v_spd -= 8;
 			in_ground = false;
 			state = "jump";
+			
+			//audio_play_sound(snd_jump,1,0);
+			
 			instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
 			instance_particle_dust.set_size(1, 2);
 			instance_particle_dust.set_direction(0,180);
@@ -143,6 +146,8 @@ function scr_player_sys(){ //Script Do Player
 	
 	if dash_timer <= 0 {
 		if key_dash{
+			in_ground = true;
+			coyote_time = 0;
 			h_spd = dash_spd * image_xscale;
 			dash_timer = dash_dur;
 			scr_player_collision();

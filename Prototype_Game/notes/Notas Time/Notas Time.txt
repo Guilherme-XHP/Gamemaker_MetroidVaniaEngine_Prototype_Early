@@ -8,6 +8,10 @@ Prototipo Atual
 	3 - Sprites Basicos [OK - XINGU]
 	4 - Colisao [OK - XINGU]
 	5 - Player [OK - XINGU]
-	6 - Sistemas Basicos
+	6 - Sistemas Basicos [OK - XINGU]
+	7 - Inimigos
+	8 - Dash (Funcional)
+	9 - Dano
+	10 - UI DEV
 
 }
