@@ -14,7 +14,7 @@ coyote_time = 0;
 coyote_time_max = 10;
 state = "idle";
 
-dash_spd = 90;
+dash_spd = 10;
 dash_dur = 10;
 dash_timer = 0;
 
