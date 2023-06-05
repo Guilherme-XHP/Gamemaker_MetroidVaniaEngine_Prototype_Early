@@ -1,26 +1,4 @@
-function scr_player_sys(){ //Script Do Player
-	
-	#region Colisao
-	
-	key_jump = keyboard_check_pressed(ord("Z"));
-	key_left = keyboard_check(vk_left);
-	key_right = keyboard_check(vk_right);
-	
-	var move = key_right - key_left;
-	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
-	
-	//Aceleracao X
-	h_spd = h_spd + acc * move;
-	h_spd = clamp(h_spd, -spd, spd)
-	
-	//Gravidade
-	v_spd = v_spd + grav;
-	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
-
-	if move = 0 {
-		h_spd = lerp(h_spd, 0, dcc);
-	}
-	
+function scr_player_collision(){
 	//X
 	if place_meeting(x + h_spd, y, obj_wall){
 		while !place_meeting(x + sign(h_spd), y, obj_wall){
@@ -38,16 +16,41 @@ function scr_player_sys(){ //Script Do Player
 		v_spd = 0;
 	}
 	y += v_spd;
+}
+
+function scr_player_sys(){ //Script Do Player
+	
+	#region Colisao
+	
+	key_jump = keyboard_check_pressed(ord("Z"));
+	key_dash = keyboard_check_pressed(ord("X"));
+	key_left = keyboard_check(vk_left);
+	key_right = keyboard_check(vk_right);
+	
+	var move = key_right - key_left;
+	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
+	var dash_dir = point_direction(x, y, x + lengthdir_x(dash_spd, image_angle), y + lengthdir_y(dash_spd, image_angle));
+
+	
+	//Aceleracao X
+	h_spd = h_spd + acc * move;
+	h_spd = clamp(h_spd, -spd, spd)
+	
+	//Gravidade
+	v_spd = v_spd + grav;
+	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
+
+	if move = 0 {
+		h_spd = lerp(h_spd, 0, dcc);
+	}
+	
+	scr_player_collision();
 	#endregion
 	
 	#region States 
 	
 	if state = "jump"{
 		if v_spd < 0 {
-			instance_particle_dust.set_direction(80,100);
-			instance_particle_dust.set_emitter_size(0,0, 0, 0);
-			instance_particle_dust.set_speed(1,3,-0.5);
-			instance_particle_dust.burst(-4);
 			sprite_index = spr_player_jump;
 			image_index = 0;
 		}else if  v_spd = 0{
@@ -94,16 +97,19 @@ function scr_player_sys(){ //Script Do Player
 			in_ground = false;
 		}
 	}
-	
+
 	//Jump
 	if in_ground {
 		if key_jump {
 			v_spd -= 8;
 			in_ground = false;
 			state = "jump";
+			instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
+			instance_particle_dust.set_size(1, 2);
 			instance_particle_dust.set_direction(0,180);
 			instance_particle_dust.set_emitter_size(-8,8, 0, 0);
 			instance_particle_dust.set_speed(5,8,-0.7);
+			instance_particle_dust.set_life(30, 90);
 			instance_particle_dust.burst(90);
 		}
 	}else{
@@ -114,13 +120,57 @@ function scr_player_sys(){ //Script Do Player
 	//Wall Jump
 	if _wall_jump{
 		if v_spd > 0.8 {
+			
+			instance_particle_dust = instance_create_depth(x - -8 * image_xscale,y,depth,obj_particles);
+			instance_particle_dust.set_life(50, 120);
+			instance_particle_dust.set_direction(80,100);
+			instance_particle_dust.set_size(0.8, 2);
+			instance_particle_dust.set_speed(0.5,1,-0.2);
 			instance_particle_dust.burst(-5);
+			
 			v_spd = 0.8;
 			state = "wjump"
+			
 			if key_jump{
 				h_spd -= 4 * image_xscale;
 				v_spd -= 8;
 			}
+		}
+	}
+	
+	#endregion
+	
+	#region Dash Testes
+	
+	if dash_timer <= 0 {
+		if key_dash{
+			
+					instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
+		instance_particle_dust.set_size(0.5, 1);
+		instance_particle_dust.set_direction(0,360);
+		instance_particle_dust.set_emitter_size(-1,6, 0, 0);
+		instance_particle_dust.set_speed(1,2,-0.2);
+		instance_particle_dust.set_life(10, 70);
+		instance_particle_dust.burst(90);
+		
+			h_spd = lengthdir_x(dash_spd * image_xscale, dash_dir);
+			dash_timer = dash_dur;
+			scr_player_collision();
+		}	
+	}else{
+		
+		instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
+		instance_particle_dust.set_size(0.5, 1);
+		instance_particle_dust.set_direction(0,360);
+		instance_particle_dust.set_emitter_size(-1,6, 0, 0);
+		instance_particle_dust.set_speed(1,2,-0.2);
+		instance_particle_dust.set_life(10, 70);
+		instance_particle_dust.burst(90);
+		
+		dash_timer--;
+		state = "dash";
+		if dash_timer <= 0 {
+			h_spd = 0;
 		}
 	}
 	

@@ -14,6 +14,10 @@ coyote_time = 0;
 coyote_time_max = 10;
 state = "idle";
 
+dash_spd = 90;
+dash_dur = 10;
+dash_timer = 0;
+
 //Particle
 instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
 instance_particle_dust.set_depth(depth + 1);

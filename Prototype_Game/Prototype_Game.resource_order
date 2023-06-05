@@ -12,6 +12,7 @@
     {"name":"obj_particles","order":4,"path":"objects/obj_particles/obj_particles.yy",},
     {"name":"spr_bkg","order":1,"path":"sprites/spr_bkg/spr_bkg.yy",},
     {"name":"spr_wall","order":2,"path":"sprites/spr_wall/spr_wall.yy",},
+    {"name":"spr_bkg11","order":5,"path":"sprites/spr_bkg11/spr_bkg11.yy",},
     {"name":"spr_player_dash","order":4,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
     {"name":"spr_controll","order":3,"path":"sprites/spr_controll/spr_controll.yy",},
     {"name":"spr_player_run","order":3,"path":"sprites/spr_player_run/spr_player_run.yy",},
