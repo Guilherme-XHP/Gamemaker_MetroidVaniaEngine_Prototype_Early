@@ -9,8 +9,17 @@
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_particles","order":4,"path":"objects/obj_particles/obj_particles.yy",},
+    {"name":"spr_bkg","order":1,"path":"sprites/spr_bkg/spr_bkg.yy",},
     {"name":"spr_wall","order":2,"path":"sprites/spr_wall/spr_wall.yy",},
-    {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
+    {"name":"spr_player_dash","order":4,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
+    {"name":"spr_controll","order":3,"path":"sprites/spr_controll/spr_controll.yy",},
+    {"name":"spr_player_run","order":3,"path":"sprites/spr_player_run/spr_player_run.yy",},
+    {"name":"spr_player_jump","order":1,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
+    {"name":"spr_player_hitbox","order":5,"path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",},
+    {"name":"spr_dust","order":4,"path":"sprites/spr_dust/spr_dust.yy",},
+    {"name":"obj_controll","order":2,"path":"objects/obj_controll/obj_controll.yy",},
+    {"name":"spr_player_wjump","order":2,"path":"sprites/spr_player_wjump/spr_player_wjump.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
   ],
 }
