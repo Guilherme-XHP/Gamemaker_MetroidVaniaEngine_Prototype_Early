@@ -23,7 +23,7 @@ function scr_enemy_sys(){
 	v_spd = v_spd + grav;
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
 	
-	h_spd = spd * dir;
+	//h_spd = spd * dir;
 	
 	scr_enemy_collision();
 	
@@ -40,14 +40,14 @@ function scr_enemy_sys(){
 			sprite_index = spr_player_jump;
 			image_index = 2;
 		}
-	}else if state = "idle" {
-		sprite_index = spr_player_idle;
 	}else if state = "walk"{
 		sprite_index = spr_player_walk;
 	}else if state = "wjump"{
 		sprite_index = spr_player_wjump;
 	}else if state = "punch"{
 		sprite_index = spr_player_punch;
+	}else if state = "hit"{
+		sprite_index = spr_player_hit;
 	}
 	
 	#endregion
@@ -65,7 +65,7 @@ function scr_enemy_sys(){
 	//Walk e Idle Controle (So Assim Que Ta Pegando)
 	if h_spd = 0 {
 		state = "idle";
-	}else if h_spd > 0 or h_spd < 0 {
+	}else {
 		state = "walk";
 	}
 	

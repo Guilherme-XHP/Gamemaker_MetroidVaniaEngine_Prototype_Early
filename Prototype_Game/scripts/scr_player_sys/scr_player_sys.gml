@@ -68,6 +68,8 @@ function scr_player_sys(){ //Script Do Player
 		sprite_index = spr_player_wjump;
 	}else if state = "punch"{
 		sprite_index = spr_player_punch;
+	}else if state = "dash"{
+		sprite_index = spr_player_dash;
 	}
 
 	#endregion	
@@ -82,7 +84,7 @@ function scr_player_sys(){ //Script Do Player
 	//Walk e Idle Controle (So Assim Que Ta Pegando)
 	if h_spd = 0 {
 		state = "idle";
-	}else if h_spd > 0 or h_spd < 0 {
+	}else {
 		state = "run";
 	}
 	
@@ -166,29 +168,42 @@ function scr_player_sys(){ //Script Do Player
 		punch_timer--;
 		state = "punch";
 	}
-	#endregion
 	
-	#region Dash Testes
+		#region Dash 
 	
-	if (key_dash && dash_timer <= 0){
-		dash_timer = dash_durat;
+	if (dash_isDispo){
+		if (key_dash && dash_timer <= 0 ){
+			dash_timer = dash_durat;
+		}
+	}
+	
+	if(dash_isDispo = false){
+		dash_cooldown--
+	} 
+	
+	if (dash_cooldown = 0){
+		dash_isDispo = true
+		dash_cooldown = 90
 	}
 	
 	if (dash_timer > 0){
 		var dash_progress = 1 - (dash_timer / dash_durat);
-		var interpolacao_spd = lerp(speed, dash_spd * image_xscale, dash_progress * dash_suave);
-		speed = interpolacao_spd ;
+		var interpolacao_spd = lerp(spd * image_xscale, dash_spd * image_xscale, dash_progress * dash_suave);
+		h_spd = interpolacao_spd ;
 		dash_timer--;
 		state = "dash"
 		scr_player_collision();
-		
+		dash_isDispo = false
 	} 
 	
 	if (dash_timer <= 0){
 		speed = 0;
 	}
 	
+	#endregion
 	
 	#endregion
+	
+
 
 }
