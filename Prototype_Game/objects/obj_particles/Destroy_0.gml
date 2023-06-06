@@ -1,5 +1,3 @@
-/// @description 
-
 // struct clean up
 delete emitter_size;
 delete offset;
