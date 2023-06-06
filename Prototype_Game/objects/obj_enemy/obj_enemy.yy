@@ -35,8 +35,8 @@
     "path": "sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId": {
-    "name": "spr_player_hitbox",
-    "path": "sprites/spr_player_hitbox/spr_player_hitbox.yy",
+    "name": "spr_hitbox",
+    "path": "sprites/spr_hitbox/spr_hitbox.yy",
   },
   "visible": true,
 }

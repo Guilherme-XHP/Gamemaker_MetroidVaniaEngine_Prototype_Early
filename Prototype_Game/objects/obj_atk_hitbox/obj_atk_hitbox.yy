@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_hit",
-    "path": "sprites/spr_player_hit/spr_player_hit.yy",
+    "name": "spr_atk_hit",
+    "path": "sprites/spr_atk_hit/spr_atk_hit.yy",
   },
   "spriteMaskId": null,
   "visible": true,
