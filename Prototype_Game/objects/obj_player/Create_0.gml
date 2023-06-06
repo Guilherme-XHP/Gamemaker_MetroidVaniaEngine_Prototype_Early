@@ -20,6 +20,11 @@ coyote_time_max = 10;
 state = "idle";
 state_dir = "r";
 
+dash_durat = 10;
+dash_timer = 0;
+dash_spd = 40;
+dash_suave = .2;
+
 punch_dur = 10;
 punch_timer = 0;
 

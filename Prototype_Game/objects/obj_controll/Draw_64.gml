@@ -1,7 +1,7 @@
 draw_set_font(dev);
 
 draw_text_scribble(_xx, _yy, "PLAY [spr_play]");
-draw_text_scribble(_xx, _yy * 2, "REC [spr_rec]");
+draw_text_scribble(_xx, _yy * 2, string(obj_player.speed));
 draw_text_scribble(_xx, _yy * 3, string(obj_player.state_dir));
 draw_text_scribble(_xx, _yy * 4, string(obj_player.state));
 if instance_exists(obj_enemy){

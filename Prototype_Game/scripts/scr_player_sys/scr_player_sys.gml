@@ -24,6 +24,7 @@ function scr_player_sys(){ //Script Do Player
 	
 	key_jump = keyboard_check_pressed(ord("Z"));
 	key_punch = keyboard_check_pressed(ord("X"));
+	key_dash = keyboard_check_pressed(vk_space);
 	key_left = keyboard_check(vk_left);
 	key_right = keyboard_check(vk_right);
 	
@@ -140,9 +141,7 @@ function scr_player_sys(){ //Script Do Player
 		}
 	}
 	
-	#endregion
-	
-	#region Dash Testes
+	// Punch
 	
 	if h_spd > 0.01{
 		state_dir = "r";
@@ -167,6 +166,28 @@ function scr_player_sys(){ //Script Do Player
 		punch_timer--;
 		state = "punch";
 	}
+	#endregion
+	
+	#region Dash Testes
+	
+	if (key_dash && dash_timer <= 0){
+		dash_timer = dash_durat;
+	}
+	
+	if (dash_timer > 0){
+		var dash_progress = 1 - (dash_timer / dash_durat);
+		var interpolacao_spd = lerp(speed, dash_spd * image_xscale, dash_progress * dash_suave);
+		speed = interpolacao_spd ;
+		dash_timer--;
+		state = "dash"
+		scr_player_collision();
+		
+	} 
+	
+	if (dash_timer <= 0){
+		speed = 0;
+	}
+	
 	
 	#endregion
 
