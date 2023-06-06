@@ -90,7 +90,6 @@
     {"id":{"name":"string_height_scribble","path":"scripts/string_height_scribble/string_height_scribble.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
     {"id":{"name":"spr_rec","path":"sprites/spr_rec/spr_rec.yy",},},
-    {"id":{"name":"spr_bkg11","path":"sprites/spr_bkg11/spr_bkg11.yy",},},
     {"id":{"name":"scribble_color_set","path":"scripts/scribble_color_set/scribble_color_set.yy",},},
     {"id":{"name":"scribble_font_set_style_family","path":"scripts/scribble_font_set_style_family/scribble_font_set_style_family.yy",},},
     {"id":{"name":"scribble_external_sound_remove","path":"scripts/scribble_external_sound_remove/scribble_external_sound_remove.yy",},},
