@@ -15,3 +15,4 @@ if instance_exists(obj_enemy){
 
 
 draw_text(_xx, _yy * 20, "SP");
+
