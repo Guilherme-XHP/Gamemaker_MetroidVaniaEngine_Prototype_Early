@@ -23,7 +23,7 @@ function scr_player_sys(){ //Script Do Player
 	#region Colisao
 	
 	key_jump = keyboard_check_pressed(ord("Z"));
-	key_dash = keyboard_check_pressed(ord("X"));
+	key_punch = keyboard_check_pressed(ord("X"));
 	key_left = keyboard_check(vk_left);
 	key_right = keyboard_check(vk_right);
 	
@@ -65,8 +65,8 @@ function scr_player_sys(){ //Script Do Player
 		sprite_index = spr_player_run;
 	}else if state = "wjump"{
 		sprite_index = spr_player_wjump;
-	}else if state = "dash"{
-		sprite_index = spr_player_dash;
+	}else if state = "punch"{
+		sprite_index = spr_player_punch;
 	}
 
 	#endregion	
@@ -100,11 +100,10 @@ function scr_player_sys(){ //Script Do Player
 	//Jump
 	if in_ground {
 		if key_jump {
+			audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 			v_spd -= 8;
 			in_ground = false;
 			state = "jump";
-			
-			//audio_play_sound(snd_jump,1,0);
 			
 			instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
 			instance_particle_dust.set_size(1, 2);
@@ -113,6 +112,7 @@ function scr_player_sys(){ //Script Do Player
 			instance_particle_dust.set_speed(5,8,-0.7);
 			instance_particle_dust.set_life(30, 90);
 			instance_particle_dust.burst(90);
+			
 		}
 	}else{
 		in_ground = false;
@@ -123,7 +123,6 @@ function scr_player_sys(){ //Script Do Player
 	if _wall_jump{
 		if v_spd > 0.8 {
 			
-			instance_particle_dust = instance_create_depth(x - -8 * image_xscale,y,depth,obj_particles);
 			instance_particle_dust.set_life(50, 120);
 			instance_particle_dust.set_direction(80,100);
 			instance_particle_dust.set_size(0.8, 2);
@@ -134,6 +133,7 @@ function scr_player_sys(){ //Script Do Player
 			state = "wjump"
 			
 			if key_jump{
+				audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 				h_spd -= 4 * image_xscale;
 				v_spd -= 8;
 			}
@@ -144,20 +144,28 @@ function scr_player_sys(){ //Script Do Player
 	
 	#region Dash Testes
 	
-	if dash_timer <= 0 {
-		if key_dash{
+	if h_spd > 0.01{
+		state_dir = "r";
+	}else if h_spd < -0.01{
+		state_dir = "l";
+	}
+	
+	if punch_timer <= 0 {
+		if key_punch{
+			alarm[3] = 1; 
+			alarm[3] = 0{
+				state = "punch";
+				instance_create_layer(x, y - 16, "GAME", obj_atk_hitbox); 
+				}
+			audio_play_sound(snd_hit, 1,0 );
 			in_ground = true;
 			coyote_time = 0;
-			h_spd = dash_spd * image_xscale;
-			dash_timer = dash_dur;
+			punch_timer = punch_dur;
 			scr_player_collision();
 		}	
 	}else{
-		dash_timer--;
-		state = "dash";
-		if dash_timer <= 0 {
-			h_spd = 0;
-		}
+		punch_timer--;
+		state = "punch";
 	}
 	
 	#endregion

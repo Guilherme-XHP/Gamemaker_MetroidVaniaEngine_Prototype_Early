@@ -1,6 +1,11 @@
 /// @description Variaveis
 
 //Player Vars
+
+alarm[3] = 0;
+
+atk_dmg = 2;
+
 spd = 4;
 grav = .4;
 acc = .4;
@@ -13,10 +18,10 @@ in_ground = false;
 coyote_time = 0;
 coyote_time_max = 10;
 state = "idle";
+state_dir = "r";
 
-dash_spd = 10;
-dash_dur = 10;
-dash_timer = 0;
+punch_dur = 10;
+punch_timer = 0;
 
 //Particle
 instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);

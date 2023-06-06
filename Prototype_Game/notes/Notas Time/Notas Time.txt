@@ -9,7 +9,7 @@ Prototipo Atual
 	4 - Colisao [OK - XINGU]
 	5 - Player [OK - XINGU]
 	6 - Sistemas Basicos [OK - XINGU]
-	7 - Inimigos
+	7 - Inimigos [INICIADO - XINGU]
 	8 - Dash (Funcional)
 	9 - Dano
 	10 - UI DEV
