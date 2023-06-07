@@ -17,6 +17,8 @@ v_spd = 0;
 v_spd_max = 8;
 
 in_ground = false;
+in_wall = false;
+para_baixo = false
 coyote_time = 0;
 coyote_time_max = 10;
 state = "idle";
