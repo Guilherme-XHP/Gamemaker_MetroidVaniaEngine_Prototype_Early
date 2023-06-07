@@ -24,7 +24,7 @@ function scr_player_sys(){ //Script Do Player
 	
 	key_jump = keyboard_check_pressed(ord("Z"));
 	key_punch = keyboard_check_pressed(ord("X"));
-	key_dash = keyboard_check_pressed(vk_space);
+	key_dash = keyboard_check_pressed(ord("C"));
 	key_left = keyboard_check(vk_left);
 	key_right = keyboard_check(vk_right);
 	
@@ -101,12 +101,13 @@ function scr_player_sys(){ //Script Do Player
 	}
 
 	//Jump
-	if in_ground {
+	if in_ground or perry_isDispo{
 		if key_jump {
-			audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
+			//audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 			v_spd -= 8;
 			in_ground = false;
 			state = "jump";
+			perry_isDispo = false;
 			
 			instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
 			instance_particle_dust.set_size(1, 2);
@@ -136,7 +137,7 @@ function scr_player_sys(){ //Script Do Player
 			state = "wjump"
 			
 			if key_jump{
-				audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
+				//audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 				h_spd -= 4 * image_xscale;
 				v_spd -= 8;
 			}
@@ -144,7 +145,6 @@ function scr_player_sys(){ //Script Do Player
 	}
 	
 	// Punch
-	
 	if h_spd > 0.01{
 		state_dir = "r";
 	}else if h_spd < -0.01{
@@ -159,8 +159,8 @@ function scr_player_sys(){ //Script Do Player
 				instance_create_layer(x, y - 16, "GAME", obj_atk_hitbox); 
 				}
 			audio_play_sound(snd_hit, 1,0 );
-			in_ground = true;
-			coyote_time = 0;
+			
+			
 			punch_timer = punch_dur;
 			scr_player_collision();
 		}	
@@ -169,24 +169,28 @@ function scr_player_sys(){ //Script Do Player
 		state = "punch";
 	}
 	
-		#region Dash 
+	#region Dash 
 	
 	if (dash_isDispo){
 		if (key_dash && dash_timer <= 0 ){
 			dash_timer = dash_durat;
 		}
 	}
-	
 	if(dash_isDispo = false){
 		dash_cooldown--
 	} 
-	
 	if (dash_cooldown = 0){
 		dash_isDispo = true
 		dash_cooldown = 90
 	}
-	
 	if (dash_timer > 0){
+		
+		instance_particle_dust.set_life(50, 120);
+		instance_particle_dust.set_direction(80,100);
+		instance_particle_dust.set_size(0.8, 2);
+		instance_particle_dust.set_speed(0.5,1,-0.2);
+		instance_particle_dust.burst(10);
+		
 		var dash_progress = 1 - (dash_timer / dash_durat);
 		var interpolacao_spd = lerp(spd * image_xscale, dash_spd * image_xscale, dash_progress * dash_suave);
 		h_spd = interpolacao_spd ;
@@ -204,6 +208,21 @@ function scr_player_sys(){ //Script Do Player
 	
 	#endregion
 	
+	if key_dash{
+		key = "C";
+	}else if key_jump{
+		key = "Z";
+	}else if key_punch{
+		key = "X";
+	}
+	
+	#region Testes
+	
+	if place_meeting(x + 1, y, obj_bubbles){
+		v_spd = -4;
+	}
+	
+	#endregion
 
 
 }

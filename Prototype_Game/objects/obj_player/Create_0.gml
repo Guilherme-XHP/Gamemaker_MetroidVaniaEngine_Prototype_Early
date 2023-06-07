@@ -1,5 +1,7 @@
 /// @description Variaveis
 
+key = "";
+
 //Player Vars
 
 alarm[3] = 0;
@@ -29,6 +31,10 @@ dash_isDispo = true;
 
 punch_dur = 10;
 punch_timer = 0;
+
+perry_isDispo = false;
+perry_time = 0;
+perry_time_max = 30;
 
 //Particle
 instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
