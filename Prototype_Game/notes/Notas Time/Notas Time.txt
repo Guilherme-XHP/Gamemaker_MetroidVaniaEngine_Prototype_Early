@@ -11,5 +11,31 @@ Prototipo Atual
 	6 - Sistemas Basicos [OK - XINGU]
 	7 - UI DEV [OK - XINGU]
 	8 - Inimigos [INICIADO - XINGU]
+	
+}
 
+2 - Mecanicas Desenvolvidas {
+	Coyote Time 
+	Dash
+	Punch
+	Wall Jump
+	Jump
+	Bubble
+	Jump Th
+}
+
+3 - Mecanicas a Fazer/Em Dev {
+	Perry (Ball)
+	Agachar
+	Hit
+	Vida
+	Game Over
+	Interface Inicial
+	*Sistema de Aprimoramento Player
+	*Pull and Push 
+}
+
+4 - Mecanicas Ao Acaso {
+	Hyper Dash, Jump, Drop
+	Dash Bubble
 }

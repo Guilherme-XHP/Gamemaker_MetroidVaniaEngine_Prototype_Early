@@ -107,7 +107,7 @@ function scr_player_sys(){ //Script Do Player
 			v_spd -= 8;
 			in_ground = false;
 			state = "jump";
-			perry_isDispo = false;
+		
 			
 			instance_particle_dust = instance_create_depth(x,y,depth,obj_particles);
 			instance_particle_dust.set_size(1, 2);
