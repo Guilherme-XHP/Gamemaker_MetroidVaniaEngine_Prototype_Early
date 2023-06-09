@@ -4,4 +4,8 @@ if instance_exists(obj_player){
     }else{
         sprite_index = -1;
     }
+	
+	if keyboard_check_pressed(vk_down){
+		 sprite_index = -1;
+	}
 }
