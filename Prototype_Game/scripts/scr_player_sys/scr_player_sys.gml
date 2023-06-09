@@ -146,7 +146,7 @@ function scr_player_sys(){ //Script Do Player
 						//audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 						h_spd -= 4 * image_xscale;
 						v_spd -= 8;
-						in_wall = false
+						
 					}
 				}		
 			}
