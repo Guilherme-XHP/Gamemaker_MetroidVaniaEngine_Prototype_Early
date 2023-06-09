@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.209116,
   "parent": {
     "name": "PizzaTower",
     "path": "folders/Sounds/PizzaTower.yy",
