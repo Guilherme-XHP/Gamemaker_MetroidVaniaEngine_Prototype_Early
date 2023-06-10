@@ -172,6 +172,7 @@
     {"name":"scribble_anim_wave","order":7,"path":"scripts/scribble_anim_wave/scribble_anim_wave.yy",},
     {"name":"zone1_theme","order":14,"path":"sounds/zone1_theme/zone1_theme.yy",},
     {"name":"__scribble_class_null_element","order":4,"path":"scripts/__scribble_class_null_element/__scribble_class_null_element.yy",},
+    {"name":"room_test2","order":1,"path":"rooms/room_test2/room_test2.yy",},
     {"name":"tile4","order":2,"path":"sounds/tile4/tile4.yy",},
     {"name":"scribble_font_rename","order":12,"path":"scripts/scribble_font_rename/scribble_font_rename.yy",},
     {"name":"scribble_rgb_to_bgr","order":2,"path":"scripts/scribble_rgb_to_bgr/scribble_rgb_to_bgr.yy",},
