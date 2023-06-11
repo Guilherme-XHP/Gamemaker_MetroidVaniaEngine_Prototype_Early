@@ -3,14 +3,21 @@ Prototipo Atual
 1 - Plataforma (Sistemas By Xingu){
 
 	Site Para Calculo de Resolucao:  https://www.omnicalculator.com/other/resolution-scale
-	1 - Configs Basicas (Sala, Pastas, Nomes, Github) [OK - XINGU]
-	2 - Background de Teste [OK - XINGU]
-	3 - Sprites Basicos [OK - XINGU]
-	4 - Colisao [OK - XINGU]
-	5 - Player [OK - XINGU]
-	6 - Sistemas Basicos [OK - XINGU]
-	7 - UI DEV [OK - XINGU]
-	8 - Inimigos [INICIADO - XINGU]
+	
+	1 - Configs Basicas (Sala, Pastas, Nomes, Github) - OK
+	2 - Background de Teste - OK
+	3 - Sprites Basicos - OK
+	4 - Colisao - OK
+	5 - Player - OK
+	6 - Sistemas Basicos - OK
+	7 - UI DEV [OK - XINGU] // APAGADO
+	8 - Android Suporte - Provisorio
+	9 - UI Mobile - Provisorio
+	10 - 
+	11 - 
+	12 - 
+	13 - 
+	14 - 
 	
 }
 
