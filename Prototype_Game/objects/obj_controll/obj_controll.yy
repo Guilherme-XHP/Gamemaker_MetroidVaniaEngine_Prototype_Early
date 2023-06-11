@@ -29,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_controll",
-    "path": "sprites/spr_controll/spr_controll.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

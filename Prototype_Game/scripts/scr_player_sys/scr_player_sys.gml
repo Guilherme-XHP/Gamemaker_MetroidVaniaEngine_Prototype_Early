@@ -245,9 +245,7 @@ function scr_player_sys(){ //Script Do Player
 	#endregion
 	
 	#region Testes
-	
-	
-	
+		
 	#endregion
 
 
