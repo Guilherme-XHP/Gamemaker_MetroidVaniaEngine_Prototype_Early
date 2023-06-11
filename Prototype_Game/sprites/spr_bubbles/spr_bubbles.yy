@@ -49,7 +49,7 @@
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "path": "folders/Game/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

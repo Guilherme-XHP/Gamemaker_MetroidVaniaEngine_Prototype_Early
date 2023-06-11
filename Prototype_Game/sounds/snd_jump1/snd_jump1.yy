@@ -13,7 +13,7 @@
   "duration": 0.221587,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "path": "folders/Game/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

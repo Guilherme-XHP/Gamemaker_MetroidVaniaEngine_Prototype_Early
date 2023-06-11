@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Map",
+    "path": "folders/Game/Objects/Map.yy",
   },
   "parentObjectId": null,
   "persistent": false,

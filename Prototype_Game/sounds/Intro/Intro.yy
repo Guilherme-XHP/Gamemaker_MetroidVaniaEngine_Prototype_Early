@@ -13,7 +13,7 @@
   "duration": 115.82767,
   "parent": {
     "name": "PizzaTower",
-    "path": "folders/Sounds/PizzaTower.yy",
+    "path": "folders/Game/Sounds/PizzaTower.yy",
   },
   "preload": false,
   "sampleRate": 44100,

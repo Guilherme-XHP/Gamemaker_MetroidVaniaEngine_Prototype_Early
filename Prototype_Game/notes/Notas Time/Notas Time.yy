@@ -4,6 +4,6 @@
   "name": "Notas Time",
   "parent": {
     "name": "Notes",
-    "path": "folders/Notes.yy",
+    "path": "folders/Game/Notes.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Classes",
-    "path": "folders/Scribble/(System - don't call these functions)/Classes.yy",
+    "path": "folders/Game/Scribble/(System - don't call these functions)/Classes.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Deprecated",
-    "path": "folders/Scribble/(System - don't call these functions)/Deprecated.yy",
+    "path": "folders/Game/Scribble/(System - don't call these functions)/Deprecated.yy",
   },
 }
