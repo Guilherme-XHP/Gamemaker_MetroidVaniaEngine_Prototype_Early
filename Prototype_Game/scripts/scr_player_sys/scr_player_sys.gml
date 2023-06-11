@@ -47,7 +47,7 @@ function scr_player_sys() {
 	with (obj_joystick){
 		if move = 0 and joy_move = 0 
 		other.h_spd = lerp(other.h_spd, 0, other.dcc);
-		}
+	}
 	
 
 	
@@ -117,7 +117,7 @@ function scr_player_sys() {
 		if in_ground or perry_isDispo{
 			if key_jump {
 				//audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
-				v_spd -= 8;
+				v_spd = -8;
 				in_ground = false;
 				state = "jump";
 		
@@ -259,6 +259,12 @@ function scr_player_sys() {
 	#endregion
 	
 	#region Testes
+		
+		if place_meeting(x, y + 1, obj_ball){
+			perry_isDispo = true
+		}else{
+			perry_isDispo = false
+		}
 		
 	#endregion
 }

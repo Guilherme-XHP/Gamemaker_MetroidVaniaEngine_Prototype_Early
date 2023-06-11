@@ -29,10 +29,11 @@ Prototipo Atual
 	Jump
 	Bubble
 	Jump Th
+	Perry (Ball) - 11/06
 }
 
 3 - Mecanicas a Fazer/Em Dev {
-	Perry (Ball)
+	
 	Agachar
 	Hit
 	Vida

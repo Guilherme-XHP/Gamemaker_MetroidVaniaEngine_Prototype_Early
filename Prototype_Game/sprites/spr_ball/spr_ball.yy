@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Game/Sprites.yy",
+    "path": "folders/LSG/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

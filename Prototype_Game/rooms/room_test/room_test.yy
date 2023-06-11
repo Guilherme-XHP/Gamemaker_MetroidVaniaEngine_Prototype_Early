@@ -22,6 +22,8 @@
     {"name":"inst_4C9C1725","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_154ED9D8","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_6135D81F","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_3937463E","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_14219ABF","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -45,12 +47,14 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_14C72BAE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0000002,"scaleY":7.0,"x":784.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3D847C6B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0000002,"scaleY":7.0,"x":0.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2317FA56","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3937463E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":328.0,"y":128.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_14219ABF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":480.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"BKG","animationFPS":30.0,"animationSpeedType":0,"colour":4284900966,"depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_bkg","path":"sprites/spr_bkg/spr_bkg.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Xingu/Rooms.yy",
+    "name": "Room",
+    "path": "folders/LSG/Room.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

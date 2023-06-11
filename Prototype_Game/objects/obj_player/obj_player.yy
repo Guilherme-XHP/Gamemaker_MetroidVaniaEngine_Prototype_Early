@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Xingu/Objects.yy",
+    "path": "folders/LSG/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
