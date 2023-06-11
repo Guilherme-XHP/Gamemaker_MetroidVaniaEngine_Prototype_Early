@@ -18,7 +18,9 @@ function scr_player_collision(){
 	y += v_spd;
 }
 
-function scr_player_sys(){ //Script Do Player
+//Script Do Player
+
+function scr_player_sys() { 
 	
 	#region Colisao e Controles 
 
@@ -29,7 +31,6 @@ function scr_player_sys(){ //Script Do Player
 	}
 
 	var move = key_right - key_left;
-	
 	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
 
 	//Aceleracao X
@@ -47,7 +48,7 @@ function scr_player_sys(){ //Script Do Player
 		if move = 0 and joy_move = 0 
 		other.h_spd = lerp(other.h_spd, 0, other.dcc);
 		}
-	}
+	
 
 	
 	scr_player_collision();
@@ -260,6 +261,4 @@ function scr_player_sys(){ //Script Do Player
 	#region Testes
 		
 	#endregion
-
-
 }
