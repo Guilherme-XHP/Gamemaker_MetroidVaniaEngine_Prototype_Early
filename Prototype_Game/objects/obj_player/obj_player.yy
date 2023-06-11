@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Map",
-    "path": "folders/Game/Objects/Map.yy",
+    "name": "Objects",
+    "path": "folders/Xingu/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

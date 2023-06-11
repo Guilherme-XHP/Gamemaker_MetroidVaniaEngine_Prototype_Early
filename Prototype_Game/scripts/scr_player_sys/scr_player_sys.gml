@@ -21,30 +21,36 @@ function scr_player_collision(){
 function scr_player_sys(){ //Script Do Player
 	
 	#region Colisao e Controles 
+
+	script_execute(scr_input);
 	
-	key_jump = keyboard_check_pressed(ord("Z"));
-	key_punch = keyboard_check_pressed(ord("X"));
-	key_dash = keyboard_check_pressed(ord("C")) or keyboard_check_pressed(vk_space);
-	key_left = keyboard_check(vk_left);
-	key_right = keyboard_check(vk_right);
-	
+	with (obj_joystick){
+		var joy_move = joy_x / radius;
+	}
+
 	var move = key_right - key_left;
 	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
 
-	
 	//Aceleracao X
 	h_spd = h_spd + acc * move;
+	with (obj_joystick){
+		other.h_spd = other.h_spd + other.acc * joy_move;
+	}
 	h_spd = clamp(h_spd, -spd, spd)
 	
 	//Gravidade
 	v_spd = v_spd + grav;
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
-
-	if move = 0 {
-		h_spd = lerp(h_spd, 0, dcc);
+	
+	with (obj_joystick){
+		if move = 0 and joy_move = 0{
+		other.h_spd = lerp(other.h_spd, 0, other.dcc);
+		}
 	}
+
 	
 	scr_player_collision();
+	
 	#endregion
 	
 	#region States 

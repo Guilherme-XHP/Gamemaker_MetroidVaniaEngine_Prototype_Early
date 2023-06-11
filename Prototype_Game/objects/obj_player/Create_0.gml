@@ -1,6 +1,6 @@
 /// @description Variaveis
 
-key = "";
+joy_move = 0;
 
 //Player Vars
 

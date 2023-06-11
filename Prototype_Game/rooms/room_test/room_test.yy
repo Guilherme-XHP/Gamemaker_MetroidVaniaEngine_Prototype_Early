@@ -18,20 +18,18 @@
     {"name":"inst_14C72BAE","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_3D847C6B","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_2317FA56","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_5772A15A","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_34C78525","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_7497B2A5","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_2B45FF3F","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_501FB05C","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_3B11FC55","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_4C9C1725","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_154ED9D8","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_6135D81F","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"UI_MOBILE","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5772A15A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_z","path":"objects/obj_button_z/obj_button_z.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":864.0,"y":576.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34C78525","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_x","path":"objects/obj_button_x/obj_button_x.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":992.0,"y":576.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7497B2A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_c","path":"objects/obj_button_c/obj_button_c.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":1120.0,"y":576.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2B45FF3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_left","path":"objects/obj_button_left/obj_button_left.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":64.0,"y":576.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_501FB05C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_right","path":"objects/obj_button_right/obj_button_right.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":224.0,"y":576.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B11FC55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_joystick","path":"objects/obj_joystick/obj_joystick.yy",},"properties":[],"rotation":0.0,"scaleX":4.0,"scaleY":4.0,"x":192.0,"y":544.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4C9C1725","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_jump","path":"objects/obj_button_jump/obj_button_jump.yy",},"properties":[],"rotation":0.0,"scaleX":9.0,"scaleY":9.0,"x":928.0,"y":512.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_154ED9D8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_dash","path":"objects/obj_button_dash/obj_button_dash.yy",},"properties":[],"rotation":0.0,"scaleX":9.0,"scaleY":9.0,"x":1088.0,"y":512.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6135D81F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_button_punch","path":"objects/obj_button_punch/obj_button_punch.yy",},"properties":[],"rotation":0.0,"scaleX":9.0,"scaleY":9.0,"x":768.0,"y":512.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"CAM","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5D1E92A","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room","path":"objects/obj_room/obj_room.yy",},"properties":[],"rotation":0.0,"scaleX":2.05,"scaleY":1.0,"x":0.0,"y":0.0,},
@@ -52,7 +50,7 @@
   ],
   "parent": {
     "name": "Rooms",
-    "path": "folders/Game/Rooms.yy",
+    "path": "folders/Xingu/Rooms.yy",
   },
   "parentRoom": null,
   "physicsSettings": {
