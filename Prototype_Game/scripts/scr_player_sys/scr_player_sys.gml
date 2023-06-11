@@ -29,6 +29,7 @@ function scr_player_sys(){ //Script Do Player
 	}
 
 	var move = key_right - key_left;
+	
 	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
 
 	//Aceleracao X
@@ -43,7 +44,7 @@ function scr_player_sys(){ //Script Do Player
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
 	
 	with (obj_joystick){
-		if move = 0 and joy_move = 0{
+		if move = 0 and joy_move = 0 
 		other.h_spd = lerp(other.h_spd, 0, other.dcc);
 		}
 	}
@@ -137,7 +138,9 @@ function scr_player_sys(){ //Script Do Player
 	#endregion
 
 	#region Wall Jump
-		if _wall_jump{
+	
+		if _wall_jump { 
+			
 				if v_spd > 0.8 {
 			
 					instance_particle_dust.set_life(50, 120);
@@ -145,17 +148,20 @@ function scr_player_sys(){ //Script Do Player
 					instance_particle_dust.set_size(0.8, 2);
 					instance_particle_dust.set_speed(0.5,1,-0.2);
 					instance_particle_dust.burst(-5);
+					
 					v_spd = 0.8;
 					state = "wjump"
 			
 					if key_jump{
+						
 						//audio_play_sound(choose(snd_jump1, snd_jump2, snd_jump3, snd_jump4), 1, 0);
 						h_spd -= 4 * image_xscale;
 						v_spd -= 8;
 						
-					}
-				}		
-			}
+				}
+			}	
+		}
+		
 	#endregion
 	
 	#region Punch
@@ -228,6 +234,7 @@ function scr_player_sys(){ //Script Do Player
 	#endregion
 	
 	#region Bubbles
+	
 		if place_meeting(x + 1, y, obj_bubbles){
 				
 			if (keyboard_check_pressed(vk_down)){
