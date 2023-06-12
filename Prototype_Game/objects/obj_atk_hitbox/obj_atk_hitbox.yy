@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "SYS",
-    "path": "folders/Game/Objects/SYS.yy",
+    "name": "Objects",
+    "path": "folders/Xingu/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

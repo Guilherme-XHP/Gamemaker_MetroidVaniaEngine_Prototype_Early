@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/LSG/Objects.yy",
+    "path": "folders/Xingu/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -35,8 +35,8 @@
     "path": "sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId": {
-    "name": "spr_hitbox",
-    "path": "sprites/spr_hitbox/spr_hitbox.yy",
+    "name": "spr_hitbox_idle",
+    "path": "sprites/spr_hitbox_idle/spr_hitbox_idle.yy",
   },
   "visible": true,
 }

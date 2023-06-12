@@ -6,13 +6,13 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Map",
-    "path": "folders/Game/Objects/Map.yy",
+    "name": "Objects",
+    "path": "folders/Xingu/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -35,8 +35,8 @@
     "path": "sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId": {
-    "name": "spr_hitbox",
-    "path": "sprites/spr_hitbox/spr_hitbox.yy",
+    "name": "spr_hitbox_idle",
+    "path": "sprites/spr_hitbox_idle/spr_hitbox_idle.yy",
   },
   "visible": true,
 }

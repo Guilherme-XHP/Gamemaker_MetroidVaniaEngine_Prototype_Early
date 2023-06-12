@@ -12,13 +12,12 @@ for (var i = 0; i < _max_devices; i++){
 	}
 }
 
-if os_type = os_android or os_windows or os_gxgames{
+if os_type = os_android{
     system = "Mobile"
-}/*
-else if os_type = os_gxgames{
+}
+else if os_type = os_gxgames or os_windows{
     system = "Desktop"
 }
-*/
 
 if system = "Mobile"{
 	layer_set_visible("UI_MOBILE", true);	

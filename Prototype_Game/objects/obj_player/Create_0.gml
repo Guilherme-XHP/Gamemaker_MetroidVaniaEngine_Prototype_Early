@@ -1,13 +1,9 @@
 /// @description Variaveis
 
-joy_move = 0;
-
-//Player Vars
-
+//Alarms
 alarm[3] = 0;
 
-atk_dmg = 2;
-
+//Defalt Vars
 spd = 4;
 grav = .4;
 acc = .4;
@@ -16,14 +12,18 @@ h_spd = 0;
 v_spd = 0;
 v_spd_max = 8;
 
-in_ground = false;
-in_wall = false;
-para_baixo = false
+//Coyote Vars
 coyote_time = 0;
 coyote_time_max = 10;
+
+//States Vars
 state = "idle";
 state_dir = "r";
+in_ground = false;
+in_wall = false;
+para_baixo = false;
 
+//Dash Vars
 dash_durat = 20;
 dash_timer = 0;
 dash_spd = 4;
@@ -31,9 +31,12 @@ dash_suave = .1;
 dash_cooldown = 90;
 dash_isDispo = true;
 
+//Punch Vars
 punch_dur = 10;
 punch_timer = 0;
+atk_dmg = 2;
 
+//Perry Vars
 perry_isDispo = false;
 perry_time = 0;
 perry_time_max = 30;

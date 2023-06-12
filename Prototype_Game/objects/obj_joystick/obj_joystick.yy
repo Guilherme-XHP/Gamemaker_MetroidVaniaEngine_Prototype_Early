@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Xingu/Objects.yy",
+    "name": "UI",
+    "path": "folders/Game/Objects/UI.yy",
   },
   "parentObjectId": {
     "name": "obj_ui_parent",

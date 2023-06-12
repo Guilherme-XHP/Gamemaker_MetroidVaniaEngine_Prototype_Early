@@ -1,61 +1,36 @@
-function scr_player_collision(){
-	//X
-	if place_meeting(x + h_spd, y, obj_wall){
-		while !place_meeting(x + sign(h_spd), y, obj_wall){
-			x += sign(h_spd);
-		}
-		h_spd = 0;
-	}
-	x += h_spd;
-
-	//Y
-	if place_meeting(x, y + v_spd, obj_wall){
-		while !place_meeting(x, y + sign(v_spd), obj_wall){
-			y += sign(v_spd);
-		}
-		v_spd = 0;
-	}
-	y += v_spd;
-}
-
-//Script Do Player
-
 function scr_player_sys() { 
 	
 	#region Colisao e Controles 
 
 	script_execute(scr_input);
 	
-	with (obj_joystick){
+	var joy_move = 0;
+	
+	with (obj_joystick) {
 		var joy_move = joy_x / radius;
 	}
-
+	
 	var move = key_right - key_left;
 	var _wall_jump = place_meeting(x - 1, y, obj_wall) || place_meeting(x + 1, y, obj_wall);
 
 	//Aceleracao X
 	h_spd = h_spd + acc * move;
-	with (obj_joystick){
-		other.h_spd = other.h_spd + other.acc * joy_move;
-	}
-	h_spd = clamp(h_spd, -spd, spd)
+	h_spd = h_spd + acc * joy_move;
+	h_spd = clamp(h_spd, -spd, spd);
 	
 	//Gravidade
 	v_spd = v_spd + grav;
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
 	
-	with (obj_joystick){
-		if move = 0 and joy_move = 0 
-		other.h_spd = lerp(other.h_spd, 0, other.dcc);
+	if move = 0 and joy_move = 0 {
+		h_spd = lerp(h_spd, 0, dcc);
 	}
 	
-
-	
-	scr_player_collision();
+	scr_collision();
 	
 	#endregion
 	
-	#region States 
+	#region States Animation
 	
 	if state = "jump"{
 		if v_spd < 0 {
@@ -78,6 +53,8 @@ function scr_player_sys() {
 		sprite_index = spr_player_punch;
 	}else if state = "dash"{
 		sprite_index = spr_player_dash;
+	}else if state = "hit"{
+		sprite_index = spr_player_hit;
 	}
 
 	#endregion	
@@ -183,7 +160,7 @@ function scr_player_sys() {
 			
 			
 				punch_timer = punch_dur;
-				scr_player_collision();
+				scr_collision();
 			}	
 		}else{
 			punch_timer--;
@@ -224,7 +201,7 @@ function scr_player_sys() {
 			h_spd = interpolacao_spd ;
 			dash_timer--;
 			state = "dash"
-			scr_player_collision();
+			scr_collision();
 			dash_isDispo = false
 		} 
 	

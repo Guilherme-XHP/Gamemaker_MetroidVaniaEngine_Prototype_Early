@@ -9,3 +9,5 @@ if state = "hit"{
 }else{
 	draw_self();
 }
+
+draw_text(x,y, string(state))
