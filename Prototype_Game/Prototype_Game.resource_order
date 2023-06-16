@@ -35,6 +35,7 @@
     {"name":"Objects","order":2,"path":"folders/Xingu/Objects.yy",},
     {"name":"Rooms","order":4,"path":"folders/Xingu/Rooms.yy",},
     {"name":"Scripts","order":1,"path":"folders/Xingu/Scripts.yy",},
+    {"name":"Sounds","order":5,"path":"folders/Xingu/Sounds.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sfx_swordhitwall","order":26,"path":"sounds/sfx_swordhitwall/sfx_swordhitwall.yy",},
